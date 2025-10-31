@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-neutral-900 text-neutral-100; /* default dark mode */
+}
+
+.card {
+  @apply rounded-xl bg-neutral-800 shadow-soft border border-neutral-700;
+}
+
+.card-light {
+  @apply rounded-xl bg-white shadow-soft border border-neutral-200;
+}
