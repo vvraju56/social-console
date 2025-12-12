@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: social-console-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+    envVars:
+      - key: YOUTUBE_CLIENT_ID
+        sync: false
+      - key: YOUTUBE_CLIENT_SECRET
+        sync: false
+      - key: YOUTUBE_REDIRECT_URI
+        sync: false
+      - key: INSTAGRAM_APP_ID
+        sync: false
+      - key: INSTAGRAM_APP_SECRET
+        sync: false
+      - key: META_REDIRECT_URI
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
